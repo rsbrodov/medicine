@@ -19,6 +19,26 @@
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-item">
+                    <a href="/admin/doctors" class="nav-link">
+                        <i class="fa fa-folder-open fa-lg" aria-hidden="true"></i>
+                        <p>Врачи</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/specializations" class="nav-link">
+                        <i class="fa fa-folder-open fa-lg" aria-hidden="true"></i>
+                        <p>Специальности</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admin/doctors-has-specializations" class="nav-link">
+                        <i class="fa fa-folder-open fa-lg" aria-hidden="true"></i>
+                        <p>Специальности врачей</p>
+                    </a>
+                </li>
+            </ul>
             <?php
             echo \hail812\adminlte\widgets\Menu::widget([
                 'items' => [
