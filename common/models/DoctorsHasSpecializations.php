@@ -29,7 +29,7 @@ class DoctorsHasSpecializations extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['doctor_id', 'specialization_id', 'created_at', 'updated_at'], 'required'],
+            [['doctor_id', 'specialization_id'], 'required'],
             [['doctor_id', 'specialization_id'], 'integer'],
             [['created_at', 'updated_at'], 'safe'],
         ];
@@ -42,10 +42,10 @@ class DoctorsHasSpecializations extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'doctor_id' => 'Doctor ID',
-            'specialization_id' => 'Specialization ID',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'doctor_id' => 'ID врача',
+            'specialization_id' => 'ID специальности',
+            'created_at' => 'Создан',
+            'updated_at' => 'Обновлен',
         ];
     }
 }

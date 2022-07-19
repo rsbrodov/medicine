@@ -51,7 +51,8 @@ class DoctorsController extends Controller
             ],
             */
         ]);
-
+        //$specializations = Spezializations::find();
+        //$doctorsHasSpecializations = DoctorsHasSpecializations::find();
         return $this->render('index', [
             'dataProvider' => $dataProvider,
         ]);

@@ -8,7 +8,7 @@ use \common\models\DoctorsHasSpecializations;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Doctors Has Specializations';
+$this->title = 'Специальности врачей';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="doctors-has-specializations-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Doctors Has Specializations', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать связь специальности и врача', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
 
@@ -25,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            // 'id',
             'doctor_id',
             'specialization_id',
             'created_at',

@@ -8,7 +8,7 @@ use \common\models\Doctors;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Doctors';
+$this->title = 'Врачи';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="doctors-index">
@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Doctors', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Добавить врача', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
 

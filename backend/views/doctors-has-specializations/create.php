@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model common\models\DoctorsHasSpecializations */
 
-$this->title = 'Create Doctors Has Specializations';
+$this->title = 'Создать связь специальности и врача';
 $this->params['breadcrumbs'][] = ['label' => 'Doctors Has Specializations', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
