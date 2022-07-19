@@ -40,7 +40,8 @@ return [
         ],
          'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;port=2620;dbname=medicine',
+            'dsn' => 'mysql:host=localhost;dbname=medicine',
+            //'dsn' => 'mysql:host=localhost;port=2620;dbname=medicine',
             'username' => 'root',
             'password' => '',
             'charset' => 'utf8',

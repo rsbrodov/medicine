@@ -185,3 +185,15 @@ use yii\helpers\Html;
     </ul>
 </nav>
 <!-- /.navbar -->
+
+<style>
+    .navbar {
+    background-color: #555299;
+    color: #fff;
+    border-bottom: 0 solid transparent;
+    
+}
+a.nav-link{
+      color:white;!important  
+    }
+</style>
