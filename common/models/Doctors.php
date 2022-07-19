@@ -44,7 +44,7 @@ class Doctors extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'name' => 'ФИО',
-            'photo' => 'Путь к фотографии',
+            'photo' => 'Фото',
             'created_at' => 'Создан',
             'updated_at' => 'Обновлен',
         ];

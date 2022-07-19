@@ -22,7 +22,7 @@ $this->registerJsFile($publishedRes[1].'/control_sidebar.js', ['depends' => '\ha
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php $this->registerCsrfMetaTags() ?>
-    <title><?= Html::encode($this->title) ?></title>
+    <!-- <title><?//= Html::encode($this->title) ?></title> -->
     <?php $this->head() ?>
 </head>
 <body class="hold-transition sidebar-mini">
@@ -52,3 +52,19 @@ $this->registerJsFile($publishedRes[1].'/control_sidebar.js', ['depends' => '\ha
 </body>
 </html>
 <?php $this->endPage() ?>
+<style>
+    body {
+    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;!important
+    font-weight: 400;!important
+    overflow-x: hidden;!important
+    overflow-y: auto;!important
+}
+</style>
+
+<style>
+    .brand-link .navbar {
+    background-color: #555299;
+    color: #fff;
+    border-bottom: 0 solid transparent;
+}
+</style>
