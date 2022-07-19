@@ -43,10 +43,10 @@ class Doctors extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'photo' => 'Photo',
-            'created_at' => 'Created At',
-            'updated_at' => 'Updated At',
+            'name' => 'ФИО',
+            'photo' => 'Путь к фотографии',
+            'created_at' => 'Создан',
+            'updated_at' => 'Обновлен',
         ];
     }
 }
