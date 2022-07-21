@@ -59,6 +59,18 @@ class User extends ActiveRecord implements IdentityInterface
         ];
     }
 
+    public function attributeLabels()
+    {
+        return [
+            'id' => 'ID',
+            'username' => 'ФИО',
+            'photo' => 'Фото',
+            'phone' => 'Телефон',
+            'created_at' => 'Создан',
+            'updated_at' => 'Обновлен',
+        ];
+    }
+
     /**
      * {@inheritdoc}
      */
