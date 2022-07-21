@@ -1,3 +1,16 @@
+
+<?
+if(Yii::$app->user->can('admin')){
+    $items =  [
+        ['label' => 'Пользователи',  'icon' => 'fa-folder-open', 'url' => ['/users/index']],
+        ['label' => 'Специальности',  'icon' => 'fa-folder-open', 'url' => ['/specializations/index']],
+    ];
+}elseif(Yii::$app->user->can('head_doctor')){
+    $items =  [
+        ['label' => 'Врачи',  'icon' => 'fa-folder-open', 'url' => ['/users/index']],
+    ];
+}
+?>
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
@@ -19,7 +32,7 @@
 
         <!-- Sidebar Menu -->
         <nav class="mt-2">
-            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+            <!-- <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
                     <a href="/admin/doctors" class="nav-link">
                         <i class="fa fa-folder-open fa-lg" aria-hidden="true"></i>
@@ -38,48 +51,10 @@
                         <p>Специальности врачей</p>
                     </a>
                 </li>
-            </ul>
+            </ul> -->
             <?php
             echo \hail812\adminlte\widgets\Menu::widget([
-                'items' => [
-                    // [
-                    //     'label' => 'Starter Pages',
-                    //     'icon' => 'tachometer-alt',
-                    //     'badge' => '<span class="right badge badge-info">2</span>',
-                    //     'items' => [
-                    //         ['label' => 'Active Page', 'url' => ['site/index'], 'iconStyle' => 'far'],
-                    //         ['label' => 'Inactive Page', 'iconStyle' => 'far'],
-                    //     ]
-                    // ],
-                    // ['label' => 'Simple Link', 'icon' => 'th', 'badge' => '<span class="right badge badge-danger">New</span>'],
-                    // ['label' => 'Yii2 PROVIDED', 'header' => true],
-                    // ['label' => 'Login', 'url' => ['site/login'], 'icon' => 'sign-in-alt', 'visible' => Yii::$app->user->isGuest],
-                    // ['label' => 'Gii',  'icon' => 'file-code', 'url' => ['/gii'], 'target' => '_blank'],
-                    // ['label' => 'Debug', 'icon' => 'bug', 'url' => ['/debug'], 'target' => '_blank'],
-                    // ['label' => 'MULTI LEVEL EXAMPLE', 'header' => true],
-                    // ['label' => 'Level1'],
-                    // [
-                    //     'label' => 'Level1',
-                    //     'items' => [
-                    //         ['label' => 'Level2', 'iconStyle' => 'far'],
-                    //         [
-                    //             'label' => 'Level2',
-                    //             'iconStyle' => 'far',
-                    //             'items' => [
-                    //                 ['label' => 'Level3', 'iconStyle' => 'far', 'icon' => 'dot-circle'],
-                    //                 ['label' => 'Level3', 'iconStyle' => 'far', 'icon' => 'dot-circle'],
-                    //                 ['label' => 'Level3', 'iconStyle' => 'far', 'icon' => 'dot-circle']
-                    //             ]
-                    //         ],
-                    //         ['label' => 'Level2', 'iconStyle' => 'far']
-                    //     ]
-                    // ],
-                    // ['label' => 'Level1'],
-                    // ['label' => 'LABELS', 'header' => true],
-                    // ['label' => 'Important', 'iconStyle' => 'far', 'iconClassAdded' => 'text-danger'],
-                    // ['label' => 'Warning', 'iconClass' => 'nav-icon far fa-circle text-warning'],
-                    // ['label' => 'Informational', 'iconStyle' => 'far', 'iconClassAdded' => 'text-info'],
-                ],
+                'items' => $items
             ]);
             ?>
         </nav>
@@ -94,3 +69,49 @@
     border-bottom: 0 solid transparent;
 }
 </style>
+
+
+<?php
+            /*echo \hail812\adminlte\widgets\Menu::widget([
+                'items' => [
+                    [
+                        'label' => 'Starter Pages',
+                        'icon' => 'tachometer-alt',
+                        'badge' => '<span class="right badge badge-info">2</span>',
+                        'items' => [
+                            ['label' => 'Active Page', 'url' => ['site/index'], 'iconStyle' => 'far'],
+                            ['label' => 'Inactive Page', 'iconStyle' => 'far'],
+                        ]
+                    ],
+                    ['label' => 'Simple Link', 'icon' => 'th', 'badge' => '<span class="right badge badge-danger">New</span>'],
+                    ['label' => 'Yii2 PROVIDED', 'header' => true],
+                    ['label' => 'Login', 'url' => ['site/login'], 'icon' => 'sign-in-alt', 'visible' => Yii::$app->user->isGuest],
+                    ['label' => 'Gii',  'icon' => 'file-code', 'url' => ['/gii'], 'target' => '_blank'],
+                    ['label' => 'Debug', 'icon' => 'bug', 'url' => ['/debug'], 'target' => '_blank'],
+                    ['label' => 'MULTI LEVEL EXAMPLE', 'header' => true],
+                    ['label' => 'Level1'],
+                    [
+                        'label' => 'Level1',
+                        'items' => [
+                            ['label' => 'Level2', 'iconStyle' => 'far'],
+                            [
+                                'label' => 'Level2',
+                                'iconStyle' => 'far',
+                                'items' => [
+                                    ['label' => 'Level3', 'iconStyle' => 'far', 'icon' => 'dot-circle'],
+                                    ['label' => 'Level3', 'iconStyle' => 'far', 'icon' => 'dot-circle'],
+                                    ['label' => 'Level3', 'iconStyle' => 'far', 'icon' => 'dot-circle']
+                                ]
+                            ],
+                            ['label' => 'Level2', 'iconStyle' => 'far']
+                        ]
+                    ],
+                    ['label' => 'Level1'],
+                    ['label' => 'LABELS', 'header' => true],
+                    ['label' => 'Important', 'iconStyle' => 'far', 'iconClassAdded' => 'text-danger'],
+                    ['label' => 'Warning', 'iconClass' => 'nav-icon far fa-circle text-warning'],
+                    ['label' => 'Informational', 'iconStyle' => 'far', 'iconClassAdded' => 'text-info'],
+                    ['label' => 'Пользователи',  'icon' => 'fa-folder-open', 'url' => ['/users/index'], 'target' => '_blank'],
+                ],
+            ]);*/
+            ?>
